@@ -15,5 +15,19 @@
 
   <p>HIDUPP JOKOWII !!</p>
 
+
+ <script>
+   const video = document.getElementById("vid");
+   
+   // paksa selalu play
+   video.addEventListener("pause", () => {
+     video.play();
+   });
+   
+   // klik video tidak bisa pause
+   video.addEventListener("click", (e) => {
+     e.preventDefault();
+   });
+ </script>
 </body>
 </html>
