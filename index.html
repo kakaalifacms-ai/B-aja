@@ -3,31 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Hidup jokowi</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <h3>Prabowo:</h3>
 
-  <video width="100%" autoplay muted loop playsinline>
+  <video id="vid" width="100%" autoplay muted loop playsinline>
     <source src="vidio.mp4" type="video/mp4">
     Browser tidak mendukung video.
   </video>
 
   <p>HIDUPP JOKOWII !!</p>
 
+  <div class="tengah">
+    <button class="btn-lanjut"
+      onclick="window.location.href='index2.html'">
+      Lanjutkan
+    </button>
+  </div>
 
  <script>
    const video = document.getElementById("vid");
-   
-   // paksa selalu play
+
    video.addEventListener("pause", () => {
      video.play();
    });
-   
-   // klik video tidak bisa pause
+
    video.addEventListener("click", (e) => {
      e.preventDefault();
    });
  </script>
+
 </body>
 </html>
